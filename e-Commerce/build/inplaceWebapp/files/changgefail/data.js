@@ -1,0 +1,7 @@
+﻿$axure.loadCurrentPage(
+(function() {
+    var _ = function() { var r={},a=arguments; for(var i=0; i<a.length; i+=2) r[a[i]]=a[i+1]; return r; }
+    var _creator = function() { return _(b,c,d,e,f,g,h,g,i,[j,k,l,m,n,o],p,_(q,r,s,t,u,v),w,_(),x,_(y,z,A,B,C,D,E,_(),F,_(G,H,I,J,K,_(L,M,N,O),P,null,Q,J,R,J,S,T,U,null,V,W,X,Y,Z,ba,bb,W),bc,_(),bd,_(),be,_(bf,[])),bg,_(),bh,_());}; 
+var b="url",c="changgefail.html",d="generationDate",e=new Date(1499705510546.36),f="isCanvasEnabled",g=false,h="isAdaptiveEnabled",i="variables",j="OnLoadVariable",k="a",l="b",m="c",n="c1",o="c2",p="defaultBackgroundImageInfo",q="path",r="images/index/bg.png",s="width",t=546,u="height",v=297,w="viewIdToBackgroundImageInfo",x="page",y="packageId",z="a8c6a339f8d14d31bd0401b7ebd0a314",A="type",B="Axure:Page",C="name",D="changgefail",E="notes",F="style",G="baseStyle",H="627587b6038d43cca051c114ac41ad32",I="pageAlignment",J="near",K="fill",L="fillType",M="solid",N="color",O=0xFFFFFFFF,P="image",Q="imageHorizontalAlignment",R="imageVerticalAlignment",S="imageRepeat",T="cover",U="favicon",V="sketchFactor",W="0",X="colorStyle",Y="appliedColor",Z="fontName",ba="Applied Font",bb="borderWidth",bc="adaptiveStyles",bd="interactionMap",be="diagram",bf="objects",bg="masters",bh="objectPaths";
+return _creator();
+})());
