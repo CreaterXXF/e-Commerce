@@ -20,7 +20,7 @@
   <body>
  当前在线人数：
 		<c:out value="${applicationScope.count }"></c:out>
-
+	欢迎[${sessionScope.user.user_name }]访问
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -36,7 +36,8 @@
         <ul class="nav navbar-nav">
         	<li class="active"><a href="index"><font color="red" >首页</font></a></li>
             <li><a href="showGoods">所有商品</a></li>
-            <li><a href="#">查看购物车</a></li>
+            <li><a href="cart?user_id=${sessionScope.user.user_id }">查看购物车</a></li>
+            <li><a href="goCollect?user_id=${sessionScope.user.user_id }">查看收藏夹</a></li>
 			<li><a href="#">我的订单</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -50,7 +51,7 @@
                     <li class="divider"></li>
                     <li><a href="#">联系客服</a></li>
                     <li class="divider"></li>
-                    <li><a href="#">网站导航</a></li>
+                    <li><a href="login1">退出登录</a></li>
                 </ul>
             </li>
         </ul>

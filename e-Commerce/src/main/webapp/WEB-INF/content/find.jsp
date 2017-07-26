@@ -90,7 +90,7 @@
 									找回								</font></font></button>
 									<a href="login1">返回登陆界面</a>	
 									<font color="red">${requestScope.findFail }</font>
-									<font color="red">${requestScope.findpwd }</font>	
+									<font color="red">${requestScope.findpwd.user_password }</font>	
 
 									
 

@@ -9,6 +9,7 @@ public class Good implements Serializable{
 	private float good_price;	
 	private String good_image;	
 	private String good_introduce;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -45,5 +46,6 @@ public class Good implements Serializable{
 	public void setGood_introduce(String good_introduce) {
 		this.good_introduce = good_introduce;
 	}
+
 	
 }

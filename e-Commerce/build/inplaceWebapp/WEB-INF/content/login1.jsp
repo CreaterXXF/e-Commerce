@@ -15,38 +15,41 @@
     <meta name="author" content="LayoutIt!">
 
     
-<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
-  </head>
-  <body>
-  	<script type="text/javascript">
+   
+    
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript">
   	$(document).ready(function(){
 		if($.cookie("rmbUser")=="true"){
 			$("#checkbox").attr("checked",true);
-			$("#user_num").val($.cookie("userName"));
-			$("#user_password").val($.cookie("passWord"));
+			$("#loginname").val($.cookie("name"));
+			$("#password").val($.cookie("pwd"));
 			
 		}
 		
 	});
 
 	function Save(){
-		if($("#checkbox").attr("checked") == true){
-			var str_loginname=$("#user_num").val();
-			var str_password=$("#user_password").val();
+		if($("#checkbox:checked").length==1){
+			var str_loginname=$("#loginname").val();
+			var str_password=$("#password").val();
 			$.cookie("rmbUser","true",{expires:7});
-			$.cookie("userName",str_loginname,{expires:7});
-			$.cookie("passWord",str_password,{expires:7});
+			$.cookie("name",str_loginname,{expires:7});
+			$.cookie("pwd",str_password,{expires:7});
 		}else{
 			$.cookie("rmbUser","false",{expires:-1});
-			$.cookie("userName","",{expires:-1});
-			$.cookie("passWord","",{expires:-1});
+			$.cookie("name","",{expires:-1});
+			$.cookie("pwd","",{expires:-1});
 		}
 		
 	};
 	</script>
 
+  </head>
+  <body>
 	<div id="web_bg" class="ground"> 
 	<img style="position:fixed;" src="img/login/background.jpg" height="100%" width="100%" /> 
 	</div>
@@ -77,15 +80,15 @@
 								账号
 							</font></font></label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="user_num" name="user_num1" value="${ username}" placeholder="请输入账号">
+								<input type="text" class="form-control" id="loginname" name="user_num1" placeholder="请输入账号">
 							</div>
 						</div>
 						<div class="form-group">
 							 
-							<label for="user_password" class="col-sm-2 control-label"><font><font>
+							<label for="user_password"  class="col-sm-2 control-label"><font><font>
 								 密码						</font></font></label>
 							<div class="col-sm-10">
-								<input type="password" class="form-control" id="user_password" name="user_password1" value="${ password}" placeholder="请输入密码">
+								<input type="password" class="form-control" id="password" name="user_password1"  placeholder="请输入密码">
 							</div>
 						</div>
 						<div class="form-group">
@@ -93,7 +96,7 @@
 								<div class="checkbox">
 									 
 									<label>
-										<input type="checkbox" id="checkbox" ><font><font> 记住密码
+										<input type="checkbox" id="checkbox" name="remember_password"><font><font> 记住密码
 									</font></font></label>
 								</div>
 							</div>
@@ -124,8 +127,6 @@
 	</div>
 </div>
 
-	<script type="text/javascript" src="js/jquery.cookie.js"></script>
-    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
